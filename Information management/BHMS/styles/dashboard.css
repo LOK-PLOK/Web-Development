@@ -1,0 +1,270 @@
+body {
+    background-color: #344799 !important;
+    height: 100vh;
+}
+
+/*==================== SIDEBAR ====================*/
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #344799;
+    position: fixed;
+    line-height: 30px;
+    height: 100vh;
+    width: 17.5%;
+    text-decoration: none;
+    color: #C6C6C6;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.off-screen-menu.active {
+    left: 0;
+}
+
+@media only screen and (max-width: 1199px){
+    nav {
+        width: 100%;
+        left: -100%;
+    }
+}
+
+.bh-logo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.navigation-tabs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-out {
+    margin-top: auto;
+    padding-bottom: 30px;
+}
+
+.navigation-tabs span, .sign-out span{
+    vertical-align: middle;
+}
+
+.navigation-tabs img ,.sign-out img{
+    margin: auto 0;
+    height: 20px;
+    width: 20px;
+}
+
+.class-align-tabs{
+    display: flex;
+    padding-left: 25px;
+    padding: 5px 5px 5px 25px;
+    margin: clamp(0.5rem, 1vh, 6rem) 0;
+}
+
+.class-align-tabs-active {
+    background-color: #ff8500;
+    border-left: white solid 10px;
+    color: white;
+}
+
+.paddingleft{
+    margin: auto 0;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+
+
+
+/*==================== CONTENT ====================*/
+
+.container-xxl {
+    position: relative;
+    background-color: white;
+    height: auto;
+    border-radius: 13px;
+    padding: 4rem;
+}
+
+@media only screen and (min-width: 1200px){
+    .container-xxl {
+        position: absolute;
+        width: 82.5% !important;
+        right: 0;
+        overflow: scroll;
+    }
+
+    .container-xxl > *, 
+    .container-xxl .dashboard-button  {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.page-header {
+    color: #344799;
+    font-size: clamp(2rem, 2.5vw, 6rem);
+    line-height: 20px;
+}
+
+/* Notification Bell */
+.notification {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 0 5px;
+}
+
+.notification img {
+    width: 30px;
+}
+
+.notification-num {
+    position: absolute;
+    right: 0;
+    background-color: #d53030;
+    border-radius: 50%; 
+    color: white;
+    font-size: 10px;
+    padding: 7px 2px; 
+    width: 16px; 
+    height: 16px; 
+    line-height: 1px; 
+}
+
+/* Burger */
+.hamburger-sidebar {
+    position: fixed;
+    top: 0;
+    margin: 20px 0;
+    z-index: 2;
+}
+
+.hamburger-sidebar.active i{
+    color: white;
+}
+
+@media only screen and (min-width: 1200px){
+    .hamburger-sidebar {
+        display: none;
+    }
+}
+
+.hamburger-sidebar i {
+    color: #344799;
+    font-size: 30px;
+}
+
+
+/* Add Buttons */
+.dashboard-button{
+    display: flex;
+    justify-content: end;
+    gap: 13px;
+    height: 45px;
+    margin: 20px 0;
+}
+
+.dashboard-button button{
+    width: 130px;
+    background-color: #344799; 
+    color: white;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    font-size: clamp(0.65rem, 2.5vw, 1rem);
+}
+
+.dashboard-button button img{
+    height: 20px;
+}
+
+
+/* Overview */
+.dashboard-icons-cont{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    margin: 20px 0 !important;
+}
+
+.dashboard-icons{
+    height: 160px;
+    width: 160px;
+    padding: 10px;
+    border-radius: 8px;
+    color: #344799;
+    margin-bottom: 20px;
+    background: #edf6f7;
+}
+
+.dashboard-icons div{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 85%;
+    gap: 8px;
+}
+
+.dashboard-icons div div{
+    font-size: 50px;
+}
+
+.dashboard-icons img{
+    height: 80px;
+}
+
+.dashboard-icons p{
+    font-size: 15px;
+    text-align: right;
+}
+
+@media only screen and (max-width: 400px) {
+    .dashboard-icons {
+        height: 140px;
+        width: 140px;
+    }
+
+    .dashboard-icons img {
+        height: 70px;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .dashboard-icons {
+        height: 250px;
+        width: 250px;
+    }
+
+    .dashboard-icons img {
+        height: 150px;
+    }
+
+    .dashboard-icons div div{
+        font-size: 70px;
+    }
+
+    .dashboard-icons p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1130px) {
+    .container-xxl {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container-xxl {
+        height: 100%;
+    }
+}
